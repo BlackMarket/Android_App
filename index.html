@@ -1,6 +1,20 @@
 <html>
 <head>
 	<script src="phonegap.js"></script>
+    <script src="iscroll.js"></script>
+    <script type="text/javascript">
+var myScroll;
+
+function loaded() {
+	myScroll = new iScroll('content', {
+		snap: true,
+		momentum: false,
+		hScrollbar: false
+	 });
+}
+
+document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
     <style>
 		body{
 			margin:0px;
