@@ -6,11 +6,7 @@
 var myScroll;
 
 function loaded() {
-	myScroll = new iScroll('content', {
-		snap: true,
-		momentum: false,
-		hScrollbar: false
-	 });
+	myScroll = new iScroll('content');
 }
 
 document.addEventListener('DOMContentLoaded', loaded, false);
