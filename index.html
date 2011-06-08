@@ -13,27 +13,27 @@
 	       }
 	   }
 	}
-	document.addEventListener("orientationChanged", updateOrientation); 
+	function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
 
-	function updateOrientation(e) {
-		switch (e.orientation){   
-		    case 0:
-	        alert("0");
-	        break;
+    function onDeviceReady() {
+        document.addEventListener("orientationChanged", updateOrientation);
+    }
 
-    		case -90:
-	        alert("-90");
-	        break;
-
-		    case 90:
-	        alert("90");
-	        break;
-
-		    default:
-	        alert("default");
-	        break;
-	    }
-	}
+    function updateOrientation(e) {
+        switch (e.orientation) {
+            case 90:
+                alert("90 Landcape");
+                break;
+            case -90:
+                alert("-90 Landcape");
+                break;
+            case 0:
+                alert("0 Portrait");
+                break;
+        }
+    }
 	</script>
 </head>
 <body>
