@@ -12,30 +12,22 @@
     	   if(a.getAttribute("title") == title) a.disabled = false;
 	       }
 	   }
-	}
-	function onLoad() {
-        document.addEventListener("deviceready", onDeviceReady, false);
-    }
+	}if (document.body && document.body.offsetWidth) {
+ winW = document.body.offsetWidth;
+ winH = document.body.offsetHeight;
+}
+if (document.compatMode=='CSS1Compat' &&
+    document.documentElement &&
+    document.documentElement.offsetWidth ) {
+ winW = document.documentElement.offsetWidth;
+ winH = document.documentElement.offsetHeight;
+}
+if (window.innerWidth && window.innerHeight) {
+ winW = window.innerWidth;
+ winH = window.innerHeight;
+}
 	
-	alert(document.body.offsetWidth);
-
-    function onDeviceReady() {
-        document.addEventListener("orientationChanged", updateOrientation);
-    }
-
-    function updateOrientation(e) {
-        switch (e.orientation) {
-            case 90:
-                alert("90 Landcape");
-                break;
-            case -90:
-                alert("-90 Landcape");
-                break;
-            case 0:
-                alert("0 Portrait");
-                break;
-        }
-    }
+	alert("Width: " + winW);
 	</script>
 </head>
 <body>
