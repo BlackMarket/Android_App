@@ -5,7 +5,7 @@ body {
 	background-image:url(../images/header.png);
 	height:359px;
 	width:100%;
-	position:fixed;
+	position:absolute;
 	top:0;
 }
 #content {
