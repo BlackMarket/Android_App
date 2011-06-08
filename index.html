@@ -27,6 +27,9 @@
 		}
 		setTimeout(detectOrientationChanges, 10);
 	}
+	$(window).scroll(function() {
+    	$('#header').css('top', $(this).scrollTop() + "px");
+	});
 	</script>
 </head>
 <body onLoad="detectOrientationChanges();">
