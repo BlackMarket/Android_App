@@ -29,7 +29,7 @@
 	}
 	var $headerdiv = $('#header');
 	$(window).scroll(function() {
-		alert("hi");
+		$("#header").css("top", $(window).scrollTop() + "px");
 	});
 	</script>
 </head>
