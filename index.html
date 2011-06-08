@@ -29,9 +29,8 @@
 	}
 	var $headerdiv = $('#header');
 	$(window).scroll(function() {
-    	$headerdiv
-			.stop()
-			.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "fast" );			
+    	$headerdiv.stop();
+		$headerdiv.animate({"marginTop": ($(window).scrollTop() + 30) + "px"}, "fast" );			
 	});
 	</script>
 </head>
