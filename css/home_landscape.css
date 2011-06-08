@@ -9,7 +9,7 @@ body {
 	top:0;
 }
 #content {
-	padding-top:359px;
+	padding-left:359px;
 }
 #apps {
 	text-align:center;
@@ -17,8 +17,8 @@ body {
 	font-weight:bold;
 	font-size:18px;
 	width:70px;
-	margin-left:230px;
-	margin-top:50px;
+	margin-left:240px;
+	margin-top:70px;
 }
 #games {
 	text-align:center;
