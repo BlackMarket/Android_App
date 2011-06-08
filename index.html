@@ -16,6 +16,8 @@
 	function onLoad() {
         document.addEventListener("deviceready", onDeviceReady, false);
     }
+	
+	alert(document.body.offsetWidth);
 
     function onDeviceReady() {
         document.addEventListener("orientationChanged", updateOrientation);
