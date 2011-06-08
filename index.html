@@ -1,19 +1,10 @@
 <html>
 <head>
 	<script src="phonegap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/home_portrait.css" title="portrait" />
-    <link rel="alternate" type="text/css" href="css/home_landscape.css" title="landscape" />
     <script>
 	var currentOrient = "P";
-    function setActiveStyleSheet(title) {
-	   var i, a,main;
-	   for(i=0; (a = document.getElementsByTagName("link")[i]); i++) {
-       if(a.getAttribute("rel").indexOf("style") != -1 && a.getAttribute("title")) {
-	       a.disabled = true;
-    	   if(a.getAttribute("title") == title) a.disabled = false;
-	       }
-	   }
-	}
 	function detectOrientationChanges(){
 		if(document.compatMode=='CSS1Compat' && document.documentElement && document.documentElement.offsetWidth){
 			winW = document.documentElement.offsetWidth;
@@ -25,12 +16,12 @@
 		}
 		if(winW > 320){
 			if(currentOrient != "L"){
-				setActiveStyleSheet("landscape");
+				$("link").attr("href","css/home_landscape.css");
 				currentOrient = "L";
 			}
 		}else{
 			if(currentOrient != "P"){
-				setActiveStyleSheet("portrait");
+				$("link").attr("href","css/home_portrait.css");
 				currentOrient = "P";
 			}
 		}
