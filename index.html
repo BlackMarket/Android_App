@@ -28,9 +28,8 @@
 		headerFixed();
 		setTimeout(detectOrientationChanges, 10);
 	}
-	var $headerdiv = $('#header');
 	function headerFixed() {
-		$headerdiv.css("top", $(window).pageXOffset() + "px");
+		$('#header').css("top", $(window).pageXOffset() + "px");
 	};
 	</script>
 </head>
