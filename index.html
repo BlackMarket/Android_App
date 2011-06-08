@@ -27,8 +27,11 @@
 		}
 		setTimeout(detectOrientationChanges, 10);
 	}
+	var $headerdiv = $('#header');
 	$(window).scroll(function() {
-    	$('#header').css('top', $(this).scrollTop() + "px");
+    	$headerdiv
+			.stop()
+			.animate({"Top": $(window).scrollTop() + "px"}, "fast" );			
 	});
 	</script>
 </head>
