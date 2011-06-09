@@ -19,7 +19,7 @@ body {
 	font-weight:bold;
 	font-size:16px;
 	width:70px;
-	margin-left:0px;
+	margin-left:20px;
 	margin-top:-40px;
 }
 #games {
@@ -28,8 +28,8 @@ body {
 	font-weight:bold;
 	font-size:18px;
 	width:70px;
-	margin-left:200px;
-	margin-top:-70px;
+	margin-left:40px;
+	margin-top:-30px;
 }
 #account {
 	text-align:center;
