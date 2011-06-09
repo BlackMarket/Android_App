@@ -20,7 +20,7 @@ body {
 	font-size:18px;
 	width:70px;
 	margin-left:240px;
-	margin-top:80px;
+	margin-top:0px;
 }
 #games {
 	text-align:center;
@@ -29,7 +29,7 @@ body {
 	font-size:18px;
 	width:70px;
 	margin-left:270px;
-	margin-top:-230px;
+	margin-top:0px;
 }
 #account {
 	text-align:center;
@@ -38,7 +38,7 @@ body {
 	font-size:18px;
 	width:70px;
 	margin-left:245px;
-	margin-top:-220px;
+	margin-top:0px;
 }
 #slider {
 	width:100%;
