@@ -25,13 +25,9 @@
 				currentOrient = "P";
 			}
 		}
-		headerFixed();
-		setTimeout(detectOrientationChanges, 10);
-	}
-	alert(window.pageXOffset);
-	function headerFixed() {
 		$('#header').css("marginTop", window.pageYOffset + "px");
-	};
+		//setTimeout(detectOrientationChanges, 10);
+	}
 	</script>
 </head>
 <body onLoad="detectOrientationChanges();">

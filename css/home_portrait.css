@@ -1,5 +1,7 @@
 body {
 	margin:0px;
+    -webkit-user-select:none;
+    -webkit-touch-callout:none;
 }
 #header {
 	background-image:url(../images/header.png);
@@ -7,6 +9,7 @@ body {
 	width:100%;
 	position:fixed;
 	top:0px;
+    line-height:359px;
 }
 #content {
 	padding-top:359px;
