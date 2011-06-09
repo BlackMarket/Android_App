@@ -5,11 +5,11 @@ body {
 }
 #header {
 	background-image:url(../images/header.png);
-	height:359px;
+	height:239px;
 	width:100%;
 	position:fixed;
 	top:0px;
-    line-height:359px;
+    line-height:239px;
 }
 #content {
 	padding-top:359px;
