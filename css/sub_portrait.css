@@ -5,13 +5,13 @@ body {
 }
 #header {
 	background-image:url(../images/header.png);
-	height:239px;
+	height:100px;
 	width:100%;
 	position:fixed;
 	top:0px;
 }
 #content {
-	padding-top:239px;
+	padding-top:100px;
 }
 #apps {
 	text-align:center;
