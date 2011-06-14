@@ -27,10 +27,19 @@
 		}
 		setTimeout(detectOrientationChanges, 10);
 	}
+	function onLoad(){
+		$.ajax({
+	  		url: 'http://178.162.135.208/ajax/getHomepageApps.php',
+		  	success: function(data) {
+				$("#content").html(data);
+		  	}
+		});
+		detectOrientationChanges();
+	}
 	</script>
     <meta name="viewport" content="user-scalable=no; initial-scale=1.3; minimum-scale=1.3; maximum-scale=1.3; width=device-width;" />
 </head>
-<body onLoad="detectOrientationChanges();">
+<body onLoad="onLoad();">
 	<div id="header">
     	<img src="images/logo.png" width="50" align="left" />
         <h3 style="color:#FFF; font-family:Verdana, Geneva, sans-serif; margin-top:10px;">Snappz Market</h3>
@@ -51,248 +60,7 @@
         </div>
     </div>
     <div id="content">
-    	<table width="100%" cellpadding="0" cellspacing="0">
-        	<tr>
-        	<td width="90" valign="top" onClick="window.location = 'app.html?aid=1'">
-        		<img src="https://ssl.gstatic.com/android/market/factory.widgets.ThreeDDigitalWeatherClock/hi-256-0-c8b54e3fbe0931120488c094c08e4a394df1d02a" width="75" align="right" style="margin-left:10px;" />
-            </td>
-            <td valign="top">
-                <div onClick="window.location = 'app.html?aid=1'">
-                	<h4 style="margin:0px; padding:0px">3D Digital Weather Clock</h4>
-                	<h5 style="margin:0px; padding:0px">Factory Widgets</h5><br/>
-               		<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star"><img src="images/star.png" /></div>
-                </div>
-                <div id="install" onClick="window.location = 'download.html'">
-                   INSTALL
-                </div>
-             </td>
-             </tr>
-        </table>
-        <hr />
-    	<table width="100%" cellpadding="0" cellspacing="0">
-        	<tr>
-        	<td width="90" valign="top" onClick="window.location = 'apps.html?aid=1'">
-        		<img src="https://ssl.gstatic.com/android/market/factory.widgets.ThreeDDigitalWeatherClock/hi-256-0-c8b54e3fbe0931120488c094c08e4a394df1d02a" width="75" align="right" style="margin-left:10px;" />
-            </td>
-            <td valign="top">
-                <div onClick="window.location = 'apps.html?aid=1'">
-                	<h4 style="margin:0px; padding:0px">3D Digital Weather Clock</h4>
-                	<h5 style="margin:0px; padding:0px">Factory Widgets</h5><br/>
-               		<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star"><img src="images/star.png" /></div>
-                </div>
-                <div id="install" onClick="window.location = 'download.html'">
-                   INSTALL
-                </div>
-             </td>
-             </tr>
-        </table>
-        <hr />
-    	<table width="100%" cellpadding="0" cellspacing="0">
-        	<tr>
-        	<td width="90" valign="top" onClick="window.location = 'apps.html?aid=1'">
-        		<img src="https://ssl.gstatic.com/android/market/factory.widgets.ThreeDDigitalWeatherClock/hi-256-0-c8b54e3fbe0931120488c094c08e4a394df1d02a" width="75" align="right" style="margin-left:10px;" />
-            </td>
-            <td valign="top">
-                <div onClick="window.location = 'apps.html?aid=1'">
-                	<h4 style="margin:0px; padding:0px">3D Digital Weather Clock</h4>
-                	<h5 style="margin:0px; padding:0px">Factory Widgets</h5><br/>
-               		<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star"><img src="images/star.png" /></div>
-                </div>
-                <div id="install" onClick="window.location = 'download.html'">
-                   INSTALL
-                </div>
-             </td>
-             </tr>
-        </table>
-        <hr />
-    	<table width="100%" cellpadding="0" cellspacing="0">
-        	<tr>
-        	<td width="90" valign="top" onClick="window.location = 'apps.html?aid=1'">
-        		<img src="https://ssl.gstatic.com/android/market/factory.widgets.ThreeDDigitalWeatherClock/hi-256-0-c8b54e3fbe0931120488c094c08e4a394df1d02a" width="75" align="right" style="margin-left:10px;" />
-            </td>
-            <td valign="top">
-                <div onClick="window.location = 'apps.html?aid=1'">
-                	<h4 style="margin:0px; padding:0px">3D Digital Weather Clock</h4>
-                	<h5 style="margin:0px; padding:0px">Factory Widgets</h5><br/>
-               		<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star"><img src="images/star.png" /></div>
-                </div>
-                <div id="install" onClick="window.location = 'download.html'">
-                   INSTALL
-                </div>
-             </td>
-             </tr>
-        </table>
-        <hr />
-    	<table width="100%" cellpadding="0" cellspacing="0">
-        	<tr>
-        	<td width="90" valign="top" onClick="window.location = 'apps.html?aid=1'">
-        		<img src="https://ssl.gstatic.com/android/market/factory.widgets.ThreeDDigitalWeatherClock/hi-256-0-c8b54e3fbe0931120488c094c08e4a394df1d02a" width="75" align="right" style="margin-left:10px;" />
-            </td>
-            <td valign="top">
-                <div onClick="window.location = 'apps.html?aid=1'">
-                	<h4 style="margin:0px; padding:0px">3D Digital Weather Clock</h4>
-                	<h5 style="margin:0px; padding:0px">Factory Widgets</h5><br/>
-               		<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star"><img src="images/star.png" /></div>
-                </div>
-                <div id="install" onClick="window.location = 'download.html'">
-                   INSTALL
-                </div>
-             </td>
-             </tr>
-        </table>
-        <hr />
-    	<table width="100%" cellpadding="0" cellspacing="0">
-        	<tr>
-        	<td width="90" valign="top" onClick="window.location = 'apps.html?aid=1'">
-        		<img src="https://ssl.gstatic.com/android/market/factory.widgets.ThreeDDigitalWeatherClock/hi-256-0-c8b54e3fbe0931120488c094c08e4a394df1d02a" width="75" align="right" style="margin-left:10px;" />
-            </td>
-            <td valign="top">
-                <div onClick="window.location = 'apps.html?aid=1'">
-                	<h4 style="margin:0px; padding:0px">3D Digital Weather Clock</h4>
-                	<h5 style="margin:0px; padding:0px">Factory Widgets</h5><br/>
-               		<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star"><img src="images/star.png" /></div>
-                </div>
-                <div id="install" onClick="window.location = 'download.html'">
-                   INSTALL
-                </div>
-             </td>
-             </tr>
-        </table>
-        <hr />
-    	<table width="100%" cellpadding="0" cellspacing="0">
-        	<tr>
-        	<td width="90" valign="top" onClick="window.location = 'apps.html?aid=1'">
-        		<img src="https://ssl.gstatic.com/android/market/factory.widgets.ThreeDDigitalWeatherClock/hi-256-0-c8b54e3fbe0931120488c094c08e4a394df1d02a" width="75" align="right" style="margin-left:10px;" />
-            </td>
-            <td valign="top">
-                <div onClick="window.location = 'apps.html?aid=1'">
-                	<h4 style="margin:0px; padding:0px">3D Digital Weather Clock</h4>
-                	<h5 style="margin:0px; padding:0px">Factory Widgets</h5><br/>
-               		<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star"><img src="images/star.png" /></div>
-                </div>
-                <div id="install" onClick="window.location = 'download.html'">
-                   INSTALL
-                </div>
-             </td>
-             </tr>
-        </table>
-        <hr />
-    	<table width="100%" cellpadding="0" cellspacing="0">
-        	<tr>
-        	<td width="90" valign="top" onClick="window.location = 'apps.html?aid=1'">
-        		<img src="https://ssl.gstatic.com/android/market/factory.widgets.ThreeDDigitalWeatherClock/hi-256-0-c8b54e3fbe0931120488c094c08e4a394df1d02a" width="75" align="right" style="margin-left:10px;" />
-            </td>
-            <td valign="top">
-                <div onClick="window.location = 'apps.html?aid=1'">
-                	<h4 style="margin:0px; padding:0px">3D Digital Weather Clock</h4>
-                	<h5 style="margin:0px; padding:0px">Factory Widgets</h5><br/>
-               		<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star"><img src="images/star.png" /></div>
-                </div>
-                <div id="install" onClick="window.location = 'download.html'">
-                   INSTALL
-                </div>
-             </td>
-             </tr>
-        </table>
-        <hr />
-    	<table width="100%" cellpadding="0" cellspacing="0">
-        	<tr>
-        	<td width="90" valign="top" onClick="window.location = 'apps.html?aid=1'">
-        		<img src="https://ssl.gstatic.com/android/market/factory.widgets.ThreeDDigitalWeatherClock/hi-256-0-c8b54e3fbe0931120488c094c08e4a394df1d02a" width="75" align="right" style="margin-left:10px;" />
-            </td>
-            <td valign="top">
-                <div onClick="window.location = 'apps.html?aid=1'">
-                	<h4 style="margin:0px; padding:0px">3D Digital Weather Clock</h4>
-                	<h5 style="margin:0px; padding:0px">Factory Widgets</h5><br/>
-               		<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star"><img src="images/star.png" /></div>
-                </div>
-                <div id="install" onClick="window.location = 'download.html'">
-                   INSTALL
-                </div>
-             </td>
-             </tr>
-        </table>
-        <hr />
-    	<table width="100%" cellpadding="0" cellspacing="0">
-        	<tr>
-        	<td width="90" valign="top" onClick="window.location = 'apps.html?aid=1'">
-        		<img src="https://ssl.gstatic.com/android/market/factory.widgets.ThreeDDigitalWeatherClock/hi-256-0-c8b54e3fbe0931120488c094c08e4a394df1d02a" width="75" align="right" style="margin-left:10px;" />
-            </td>
-            <td valign="top">
-                <div onClick="window.location = 'apps.html?aid=1'">
-                	<h4 style="margin:0px; padding:0px">3D Digital Weather Clock</h4>
-                	<h5 style="margin:0px; padding:0px">Factory Widgets</h5><br/>
-               		<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star"><img src="images/star.png" /></div>
-                </div>
-                <div id="install" onClick="window.location = 'download.html'">
-                   INSTALL
-                </div>
-             </td>
-             </tr>
-        </table>
-        <hr />
-    	<table width="100%" cellpadding="0" cellspacing="0">
-        	<tr>
-        	<td width="90" valign="top" onClick="window.location = 'apps.html?aid=1'">
-        		<img src="https://ssl.gstatic.com/android/market/factory.widgets.ThreeDDigitalWeatherClock/hi-256-0-c8b54e3fbe0931120488c094c08e4a394df1d02a" width="75" align="right" style="margin-left:10px;" />
-            </td>
-            <td valign="top">
-                <div onClick="window.location = 'apps.html?aid=1'">
-                	<h4 style="margin:0px; padding:0px">3D Digital Weather Clock</h4>
-                	<h5 style="margin:0px; padding:0px">Factory Widgets</h5><br/>
-               		<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star" class="blue_star"><img src="images/star.png" /></div>
-                	<div id="star"><img src="images/star.png" /></div>
-                </div>
-                <div id="install" onClick="window.location = 'download.html'">
-                   INSTALL
-                </div>
-             </td>
-             </tr>
-        </table>
-        <hr />
+    	
     </div>
 </body>
 </html>
