@@ -28,9 +28,9 @@
 	}
 	function onload(){
 		$.ajax({
-	  		url: 'http://www.google.com',
+	  		url: 'http://178.162.135.208/ajax/getAppCategories.php',
 		  	success: function(data) {
-			    alert('Load was performed.');
+			    alert(data);
 		  	}
 		});
 		detectOrientationChanges();
