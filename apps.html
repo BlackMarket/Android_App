@@ -38,7 +38,7 @@
 		detectOrientationChanges();
 	}
 	function onBackKeyDown() {
-		alert(document.referrer); 
+		window.location = 'index.html';
     }
     function onDeviceReady() {
 		document.addEventListener("backbutton", onBackKeyDown, false);
