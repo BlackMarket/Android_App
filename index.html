@@ -29,6 +29,22 @@
 	}
 	function onLoad(){
 		$.ajax({
+	  		url: 'http://178.162.135.208/ajax/getConfig.php?n=currentVersion',
+		  	success: function(data) {
+				if(data != '0.1'){
+					window.location = 'update.html';
+				}
+		  	}
+		});
+		$.ajax({
+	  		url: 'http://178.162.135.208/ajax/getConfig.php?n=serverStatus',
+		  	success: function(data) {
+				if(data != 'online'){
+					window.location = 'down.html';
+				}
+		  	}
+		});
+		$.ajax({
 	  		url: 'http://178.162.135.208/ajax/getHomepageApps.php',
 		  	success: function(data) {
 				$("#content").html(data);
