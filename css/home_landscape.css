@@ -42,8 +42,8 @@ body {
 	margin-top:20px;
 }
 #slider {
-	width:100%;
-	height:140px;
+	width:140px;
+	height:100%;
 }
 #star {
 	background-color:#cccccc;
