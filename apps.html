@@ -37,7 +37,16 @@
 	    }
 	    return vars;
 	}
-	function onload(){
+function onload(){
+$.ajax({
+	  			url: 'http://178.162.135.208/ajax/getAppCategories.php',
+		  		success: function(data) {
+					$("#content").html(data);
+		  		}
+			});
+}
+	function onloadold(){
+
 		if (typeof getUrlVars()["i"] != 'undefined') {
 			$.ajax({
 	  			url: 'http://178.162.135.208/ajax/getAppCategories.php?i=' + getUrlVars()["i"],
