@@ -38,12 +38,21 @@
 	    return vars;
 	}
 	function onload(){
-		$.ajax({
-	  		url: 'http://178.162.135.208/ajax/getAppCategories.php?i=' + getUrlVars()["i"],
-		  	success: function(data) {
-				$("#content").html(data);
-		  	}
-		});
+		if (typeof getUrlVars()["i"] != 'undefined') {
+			$.ajax({
+	  			url: 'http://178.162.135.208/ajax/getAppCategories.php?i=' + getUrlVars()["i"],
+		  		success: function(data) {
+					$("#content").html(data);
+		  		}
+			});
+		}else{
+			$.ajax({
+	  			url: 'http://178.162.135.208/ajax/getAppCategories.php',
+		  		success: function(data) {
+					$("#content").html(data);
+		  		}
+			});
+		}
 		detectOrientationChanges();
 	}
 	</script>
