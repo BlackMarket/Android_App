@@ -28,7 +28,6 @@
 		setTimeout(detectOrientationChanges, 10);
 	}
 	function onLoad(){
-alert(device.uuid);
 		$.ajax({
 	  		url: 'http://178.162.135.208/ajax/getConfig.php?n=currentVersion',
 		  	success: function(data) {
