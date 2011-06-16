@@ -42,8 +42,7 @@ body {
 	margin-top:20px;
 }
 #slider {
-	width:140px;
-	height:100%;
+	visibility:hidden;
 }
 #star {
 	background-color:#cccccc;
