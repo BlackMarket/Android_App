@@ -26,14 +26,28 @@
 		}
 		setTimeout(detectOrientationChanges, 10);
 	}
-function onload(){
-$.ajax({
-	  			url: 'http://178.162.135.208/ajax/getAppCategories.php',
-		  		success: function(data) {
+	function getUrlVars(){
+	    var vars = [], hash;
+	    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+	    for(var i = 0; i < hashes.length; i++){
+	        hash = hashes[i].split('=');
+	        vars.push(hash[0]);
+	        vars[hash[0]] = hash[1];
+	    }
+	    return vars;
+	}
+	function onload(){
+		if(getUrlVars()["aid"] != undefined){
+			$("#content").html("<center>Loading...</center>");
+			$.ajax({
+		  		url: 'http://178.162.135.208/ajax/getAppCategories.php',
+			  	success: function(data) {
 					$("#content").html(data);
-		  		}
+			  	}
 			});
-}
+			detectOrientationChanges();
+		}
+	}
 	
 	</script>
     <meta name="viewport" content="user-scalable=no; initial-scale=1.3; minimum-scale=1.3; maximum-scale=1.3; width=device-width;" />
@@ -47,7 +61,66 @@ $.ajax({
         </div>
     </div>
     <div id="content">
-    	<center>Loading...</center>
+    	<div id="item" onClick="window.location = 'app.html?i=1'" style="margin-top:5px;">
+			<h3 style="margin:0px; padding:0px;">All Applications</h3>
+    	    <h5 style="margin:0px; padding:0px; color:#666">KakaoTalk, Google Maps, Flash Player 10.3</h5>
+        </div>
+        <hr>
+    	<div id="item" onClick="window.location = ''">
+			<h3 style="margin:0px; padding:0px;">Books & Reference</h3>
+    	    <h5 style="margin:0px; padding:0px; color:#666">Google Sky Map, Bible, Naver</h5>
+        </div>
+        <hr>
+    	<div id="item" onClick="window.location = ''">
+			<h3 style="margin:0px; padding:0px;">Business</h3>
+    	    <h5 style="margin:0px; padding:0px; color:#666">DocumentsTo Go, Exchange By T</h5>
+        </div>
+        <hr>
+    	<div id="item" onClick="window.location = ''">
+			<h3 style="margin:0px; padding:0px;">Comics</h3>
+    	    <h5 style="margin:0px; padding:0px; color:#666">Mango - Manga Reader, Rage Reader, Comics</h5>
+        </div>
+        <hr>
+    	<div id="item" onClick="window.location = ''">
+			<h3 style="margin:0px; padding:0px;">Communication</h3>
+    	    <h5 style="margin:0px; padding:0px; color:#666">KakaoTalk, WhatsApp Messenger, Gmail</h5>
+        </div>
+        <hr>
+    	<div id="item" onClick="window.location = ''">
+			<h3 style="margin:0px; padding:0px;">Education</h3>
+    	    <h5 style="margin:0px; padding:0px; color:#666">Kids Shape Puzzle Lite, Kids Numbers and Math</h5>
+        </div>
+        <hr>
+    	<div id="item" onClick="window.location = ''">
+			<h3 style="margin:0px; padding:0px;">Entertainment</h3>
+    	    <h5 style="margin:0px; padding:0px; color:#666">Talking Tom Cat Free, Movies, Bible Quotes</h5>
+        </div>
+        <hr>
+    	<div id="item" onClick="window.location = ''">
+			<h3 style="margin:0px; padding:0px;">Finance</h3>
+    	    <h5 style="margin:0px; padding:0px; color:#666">Bank of America, Chase Mobile, CWMoney Expe</h5>
+        </div>
+        <hr>
+    	<div id="item" onClick="window.location = ''">
+			<h3 style="margin:0px; padding:0px;">Health & Fitness</h3>
+    	    <h5 style="margin:0px; padding:0px; color:#666">My Tracks, Adida MiCoach, WebMD fo Android</h5>
+        </div>
+        <hr>
+    	<div id="item" onClick="window.location = ''">
+			<h3 style="margin:0px; padding:0px;">Lifestyle</h3>
+    	    <h5 style="margin:0px; padding:0px; color:#666">Horoscope, My Days - Period & Ovulation, Daily</h5>
+        </div>
+        <hr>
+    	<div id="item" onClick="window.location = ''">
+			<h3 style="margin:0px; padding:0px;">Live Wallpaper</h3>
+    	    <h5 style="margin:0px; padding:0px; color:#666">Google Maps, Beautiful Widgets, WeatherBug Elit</h5>
+        </div>
+        <hr>
+    	<div id="item" onClick="window.location = ''">
+			<h3 style="margin:0px; padding:0px;">Media & Video</h3>
+    	    <h5 style="margin:0px; padding:0px; color:#666">DocumentsTo Go, Exchange By T</h5>
+        </div>
+        <hr>
     </div>
 </body>
 </html>
