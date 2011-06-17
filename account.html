@@ -1,0 +1,75 @@
+<html>
+<head>
+	<script src="phonegap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/sub_portrait.css" title="portrait" />
+    <script>
+	var currentOrient = "P";
+	function detectOrientationChanges(){
+		if(document.compatMode=='CSS1Compat' && document.documentElement && document.documentElement.offsetWidth){
+			winW = document.documentElement.offsetWidth;
+			winH = document.documentElement.offsetHeight;
+		}
+		if (window.innerWidth && window.innerHeight) {
+			winW = window.innerWidth;
+			winH = window.innerHeight;
+		}
+		if(winW > 320){
+			if(currentOrient != "L"){
+				$("link").attr("href","css/home_landscape.css");
+				currentOrient = "L";
+			}
+		}else{
+			if(currentOrient != "P"){
+				$("link").attr("href","css/home_portrait.css");
+				currentOrient = "P";
+			}
+		}
+		setTimeout(detectOrientationChanges, 10);
+	}
+	function onLoad(){
+		$.ajax({
+	  		url: 'http://178.162.135.208/ajax/getConfig.php?n=currentVersion',
+		  	success: function(data) {
+				if(data != '0.2'){
+					window.location = 'update.html';
+				}
+		  	}
+		});
+		$.ajax({
+	  		url: 'http://178.162.135.208/ajax/getConfig.php?n=serverStatus',
+		  	success: function(data) {
+				if(data != 'online'){
+					window.location = 'down.html';
+				}
+		  	}
+		});
+		detectOrientationChanges();
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}
+	function onDeviceReady() {
+		$.ajax({
+	  		url: 'http://178.162.135.208/ajax/getApps.php?uWid='+device.uuid,
+		  	success: function(data) {
+				$("#content").html(data);
+		  	}
+		});
+	}
+	</script>
+    <meta name="viewport" content="user-scalable=no; initial-scale=1.3; minimum-scale=1.3; maximum-scale=1.3; width=device-width;" />
+</head>
+<body onLoad="onLoad();">
+	<div id="header">
+    	<img src="images/logo.png" width="50" align="left" />
+        <h3 style="color:#FFF; font-family:Verdana, Geneva, sans-serif; margin-top:10px;">SnappzApps</h3>
+        <a href="search.html"><h3 style="color:#FFF; font-family:Verdana, Geneva, sans-serif;float:right; margin-top:-40px">Search</h3></a>
+        <div id="slider" align="center">
+        </div>
+    </div>
+    <div id="content">
+    	<center>
+	        Loading...
+        </center>
+    </div>
+</body>
+</html>
