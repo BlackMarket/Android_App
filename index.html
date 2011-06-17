@@ -45,7 +45,7 @@
 		  	}
 		});
 		$.ajax({
-	  		url: 'http://178.162.135.208/ajax/getHomepageApps.php',
+	  		url: 'http://178.162.135.208/ajax/getHomepageApps.php?uid='+device.uuid,
 		  	success: function(data) {
 				$("#content").html(data);
 		  	}
