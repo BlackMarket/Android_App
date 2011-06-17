@@ -16,12 +16,12 @@
 		}
 		if(winW > 320){
 			if(currentOrient != "L"){
-				$("link").attr("href","css/sub_landscape.css");
+				$("link").attr("href","css/home_landscape.css");
 				currentOrient = "L";
 			}
 		}else{
 			if(currentOrient != "P"){
-				$("link").attr("href","css/sub_portrait.css");
+				$("link").attr("href","css/home_portrait.css");
 				currentOrient = "P";
 			}
 		}
@@ -49,7 +49,7 @@
 	}
 	function onDeviceReady() {
 		$.ajax({
-	  		url: 'http://178.162.135.208/ajax/getApps.php?uid='+device.uuid,
+	  		url: 'http://178.162.135.208/ajax/getHomepageApps.php?uid='+device.uuid,
 		  	success: function(data) {
 				$("#content").html(data);
 		  	}
@@ -61,12 +61,14 @@
 <body onLoad="onLoad();">
 	<div id="header">
     	<img src="images/logo.png" width="50" align="left" />
-        <h3 style="color:#FFF; font-family:Verdana, Geneva, sans-serif; margin-top:10px;">SnappzApps</h3>
+        <h3 style="color:#FFF; font-family:Verdana, Geneva, sans-serif; margin-top:10px;">Snappz Market</h3>
+        <a href="search.html"><h3 style="color:#FFF; font-family:Verdana, Geneva, sans-serif;float:right; margin-top:-40px">Search</h3></a>
         <div id="slider" align="center">
         </div>
     </div>
     <div id="content">
     	<center>
+	        Loading...
         </center>
     </div>
 </body>
