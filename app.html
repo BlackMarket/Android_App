@@ -43,18 +43,12 @@
 				$("#content").html(data);
 		  	}
 		});
-		$.ajax({
-	  		url: 'http://178.162.135.208/ajax/getAppHeader.php?aid=' + getUrlVars()["aid"],
-		  	success: function(data) {
-				$("#header").html(data);
-		  	}
-		});
 		detectOrientationChanges();
 		document.addEventListener("deviceready", onDeviceReady, false);
 	}
 	function onDeviceReady() {
 		$.ajax({
-	  		url: 'http://178.162.135.208/ajax/getAppInfo.php?aid=' + getUrlVars()["aid"] + '&uid=' + device.uuid,
+	  		url: 'http://178.162.135.208/ajax/getAppHeader.php?aid=' + getUrlVars()["aid"] + '&uid=' + device.uuid,
 		  	success: function(data) {
 				$("#content").html(data);
 		  	}
