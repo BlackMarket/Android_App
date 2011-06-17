@@ -2,7 +2,7 @@
 <head>
 	<script src="phonegap.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/home_portrait.css" title="portrait" />
+    <link rel="stylesheet" type="text/css" href="css/sub_portrait.css" title="portrait" />
     <script>
 	var currentOrient = "P";
 	function detectOrientationChanges(){
@@ -16,12 +16,12 @@
 		}
 		if(winW > 320){
 			if(currentOrient != "L"){
-				$("link").attr("href","css/home_landscape.css");
+				$("link").attr("href","css/sub_landscape.css");
 				currentOrient = "L";
 			}
 		}else{
 			if(currentOrient != "P"){
-				$("link").attr("href","css/home_portrait.css");
+				$("link").attr("href","css/sub_portrait.css");
 				currentOrient = "P";
 			}
 		}
