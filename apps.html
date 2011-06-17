@@ -49,7 +49,7 @@
 	}
 	function onDeviceReady() {
 		$.ajax({
-	  		url: 'http://178.162.135.208/ajax/getHomepageApps.php?uid='+device.uuid,
+	  		url: 'http://178.162.135.208/ajax/getApps.php?uWid='+device.uuid,
 		  	success: function(data) {
 				$("#content").html(data);
 		  	}
@@ -61,7 +61,7 @@
 <body onLoad="onLoad();">
 	<div id="header">
     	<img src="images/logo.png" width="50" align="left" />
-        <h3 style="color:#FFF; font-family:Verdana, Geneva, sans-serif; margin-top:10px;">Snappz Market</h3>
+        <h3 style="color:#FFF; font-family:Verdana, Geneva, sans-serif; margin-top:10px;">SnappzApps</h3>
         <a href="search.html"><h3 style="color:#FFF; font-family:Verdana, Geneva, sans-serif;float:right; margin-top:-40px">Search</h3></a>
         <div id="slider" align="center">
         </div>
