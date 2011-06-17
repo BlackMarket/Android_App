@@ -1,5 +1,6 @@
 <html>
 <head>
+    <script src="phonegap.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/home_portrait.css" title="portrait" />
     <script>
@@ -50,7 +51,7 @@
 		$.ajax({
 	  		url: 'http://178.162.135.208/ajax/getAppHeader.php?aid=' + getUrlVars()["aid"] + '&uid=' + device.uuid,
 		  	success: function(data) {
-				$("#content").html(data);
+				$("#header").html(data);
 		  	}
 		});
 	}
