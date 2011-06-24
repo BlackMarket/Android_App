@@ -1,6 +1,7 @@
 <html>
 <head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+	<script src="phonegap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/sub_portrait.css" title="portrait" />
     <script>
 	var currentOrient = "P";
@@ -15,43 +16,41 @@
 		}
 		if(winW > 320){
 			if(currentOrient != "L"){
-				$("link").attr("href","css/sub_landscape.css");
+				$("link").attr("href","css/home_landscape.css");
 				currentOrient = "L";
 			}
 		}else{
 			if(currentOrient != "P"){
-				$("link").attr("href","css/sub_portrait.css");
+				$("link").attr("href","css/home_portrait.css");
 				currentOrient = "P";
 			}
 		}
 		setTimeout(detectOrientationChanges, 10);
 	}
-	function onload(){
+	function onLoad(){
 		detectOrientationChanges();
+		document.addEventListener("deviceready", onDeviceReady, false);
 	}
-	function getResults(term){
+	function onDeviceReady() {
 		$.ajax({
-	  		url: 'http://178.162.135.208/ajax/getSearchResults.php?term='+term,
+	  		url: 'http://178.162.135.208/ajax/getSearch.php',
 		  	success: function(data) {
-				$("#results").html(data);
+				$("#content").html(data);
 		  	}
 		});
 	}
 	</script>
     <meta name="viewport" content="user-scalable=no; initial-scale=1.3; minimum-scale=1.3; maximum-scale=1.3; width=device-width;" />
 </head>
-<body onLoad="onload();">
+<body onLoad="onLoad();">
 	<div id="header">
     	<img src="images/logo.png" width="50" align="left" />
-        <h3 style="color:#000; font-family:Verdana, Geneva, sans-serif; margin-top:15px;">SnappzSearch</h3>
-        <div id="slider">
-	        &nbsp;
-        </div>
+        <h3 style="color:#FFF; font-family:Verdana, Geneva, sans-serif; margin-top:10px;">SnappzSearch</h3>
     </div>
     <div id="content">
-    	Search Term: <input type="text" onKeyDown="getResults(this.value)">
-        <div id="results" style="margin-top:3px; border-top:#000 1px solid">
-        </div>
+    	<center>
+	        Loading...
+        </center>
     </div>
 </body>
 </html>
