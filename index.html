@@ -51,7 +51,7 @@
 	}
 	function onDeviceReady() {
 		$.ajax({
-	  		url: 'http://178.162.135.208/ajax/getHomepageApps.php?uid='+device.uuid+'&ver=0.4',
+	  		url: 'http://178.162.135.208/ajax/getHomepageApps.php?uid='+device.uuid+'&ver=1.0',
 		  	success: function(data) {
 				$("#content").html(data);
 		  	}
